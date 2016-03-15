@@ -1,0 +1,62 @@
+#A Walnut Mallet
+
+I decided a good project for me would be making a mallet. I had a reasonably
+sized block of walnut lying around from my school days, and I needed one, as I
+was using a plastic hammer with far too little heft. Generally speaking, the
+less mass a tool has, the faster you will end up moving it to generate the same
+momentum before contact. Momentum is $mass \cdot velocity$, so this compensation
+is quite natural. For humans, higher velocity tends to mean less control, so the
+weight of a tool can make a lot of a difference, especially for delicate work,
+such as chiseling out dovetails in endgrain.
+
+Of course a wooden mallet is also more traditional, and undeniably more
+aesthetic than their synthetic counterparts.
+
+As all things should, this project started out with a little research and
+inspiration, these pieces are the ones that stood out for me.
+Steve Schuler's and Paul Sellers' are quite alike (with the latter made from beautiful,
+beautiful spalted pecan wood).
+
+Steve Ramsey's stands out with a faceted head, and being made from maple it is
+quite beautiful.
+
+In the end, I went with Seller's design for the heft, and rugged look.
+
+- [Paul sellers'
+  blog](https://paulsellers.com/2015/01/the-mallet-making-video-is-on-youtube/)
+- [Steve Schuler's blog](https://literaryworkshop.wordpress.com/2014/10/15/making-a-joiners-mallet/)
+- [Steve Ramsey's
+blog](http://woodworking.formeremortals.net/2012/06/make-a-wood-mallet/)
+
+
+![Truing and squaring the block of walnut] [block-walnut]
+
+The walnut had already been milled at the school, where I had access to
+mechanical jointers and thickness planers, but after a few months of lying
+around around in my apartment it had to be done again, this time by hand.
+
+After planing, I cut the block in two in the direction of the grain, one part
+for the head, one for the handle. This part of the process coincided with me
+having access to a workshop, so I cut them on a bandsaw. Note the slight taper
+on the handle. The mallet isn't glued up, so the mechanical strength of the
+tapered handle --- wedging into a tapered mortise in the head --- is all that's
+keeping the mallet together!
+
+![Head and handle, bandsawn] [bandsawn]
+
+The striking surfaces of the head have a more aggressive taper. I'm not sure how
+this affects the feel of the mallet, but it helps in making the edges and
+corners obtuse in the final result (later, the head's top face will be rounded).
+Sharp angles are weak and prone to breakage. They are also problematic with
+regard to finishing, as the surface tension in the finish will tend to drag it
+away from sharp corners.
+
+[block-walnut]: ../pics/initial_planing_opt.jpg
+[bandsawn]: ../pics/bandsawn.jpg
+[drilled]: ../pics/drilled.jpg
+[drilled2]: ../pics/drilled2.jpg
+[mortise]: ../pics/mortise.jpg
+[drying]: ../pics/drying.jpg
+[finished]: ../pics/finished_lying.jpg
+[finished-stand]: ../pics/finished_standing.jpg
+[finished-end]: ../pics/finished_end.jpg

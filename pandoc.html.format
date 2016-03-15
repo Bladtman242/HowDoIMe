@@ -1,0 +1,105 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"$if(lang)$ lang="$lang$" xml:lang="$lang$"$endif$>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <style>
+    body {
+      margin: auto;
+      width: 80ex;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      font-size: 18px;
+      line-height: 1.6;
+      color: rgba(0,0,0,0.8);
+      background-color: #FAFAFA;
+    }
+    H1, H2, H3 {
+      font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+    }
+    H1{
+      font-size: 30px;
+    }
+    H2{
+      font-size: 26px;
+    }
+    H3{
+      font-size: 22px;
+    }
+    p {
+      font-family: medium-content-serif-font, Georgia, Cambria, 'Times New Roman', Times, serif;
+    }
+    img {
+      display: block;
+      width: 80ex;
+      border-style: dotted;
+      border-width: 1px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0px;
+    }
+    .caption {
+      line-height: 50%;
+      font-size: 16px;
+      font-style: italic;
+
+    }
+  </style>
+  <font face="helvetica"></font>
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="date" content="$date-meta$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+  <style type="text/css">code{white-space: pre;}</style>
+$if(quotes)$
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+$endif$
+$if(highlighting-css)$
+  <style type="text/css">
+$highlighting-css$
+  </style>
+$endif$
+$for(css)$
+  <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
+$endfor$
+$if(math)$
+  $math$
+$endif$
+$for(header-includes)$
+  $header-includes$
+$endfor$
+</head>
+<body>
+$for(include-before)$
+$include-before$
+$endfor$
+$if(title)$
+<div id="$idprefix$header">
+<h1 class="title">$title$</h1>
+$if(subtitle)$
+<h1 class="subtitle">$subtitle$</h1>
+$endif$
+$for(author)$
+<h2 class="author">$author$</h2>
+$endfor$
+$if(date)$
+<h3 class="date">$date$</h3>
+$endif$
+</div>
+$endif$
+$if(toc)$
+<div id="$idprefix$TOC">
+$toc$
+</div>
+$endif$
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
+</body>
+</html>
