@@ -1,8 +1,8 @@
-#A Walnut Mallet
+#A Joiner's Mallet in Walnut
 
 I decided a good project for me would be making a mallet. I had a reasonably
-sized block of walnut lying around from my school days, and I needed one, as I
-was using a plastic hammer with far too little heft. Generally speaking, the
+sized block of walnut lying around from my school days, and I needed one. I'd
+been using a plastic hammer with far too little heft. Generally speaking, the
 less mass a tool has, the faster you will end up moving it to generate the same
 momentum before contact. Momentum is $mass \cdot velocity$, so this is a natural
 compensation. For humans, higher velocity tends to mean less control, so the
@@ -16,11 +16,9 @@ aesthetic than their synthetic counterparts.
 
 As all things should, this project started out with a little research and
 inspiration, these pieces are the ones that stood out for me.
-Steve Schuler's and Paul Sellers' are alike with the latter made from beautiful,
+Paul Sellers' and Steve Schuler's are alike with the latter made from beautiful,
 beautiful spalted pecan wood (Schuler's design is adapted from Sellers').
 Steve Ramsey's stands out with a beautiful, faceted, maple head.
-
-In the end, I went with Sellers' design for the heft, and rugged look.
 
 - [Paul sellers'
   blog](https://paulsellers.com/2015/01/the-mallet-making-video-is-on-youtube/)
@@ -28,6 +26,7 @@ In the end, I went with Sellers' design for the heft, and rugged look.
 - [Steve Ramsey's
 blog](http://woodworking.formeremortals.net/2012/06/make-a-wood-mallet/)
 
+In the end, I went with Sellers' design for the heft, and rugged look.
 
 ![Truing and squaring the block of walnut] [block-walnut]
 
@@ -51,10 +50,27 @@ Sharp angles are weak and prone to breakage. They are also problematic with
 regard to finishing, as the surface tension in the finish will tend to drag it
 away from sharp corners.
 
+##Cutting the mortise
+
+![The bulk of the mortise is drilled out] [drilled]
+
+The measurements for the mortise are copied from the handle using marking,
+gauge, ruler, and square. This way, the taper in the mortise is the same as that
+on the handle. To save time and effort, the bulk of the mortise is drilled out
+using an auger bit. The only bit I had was 8mm in diameter. A better fit would
+have probably saved me some effort.
+
+The faces of the mortise are then cut with a chisel (this is the part where a
+mallet would have been really useful).
+
+When satisfied with the mortise, the handle is planed down until it slides in
+with ease.
+
+![] [mortise]
+
 [block-walnut]: ../pics/initial_planing_opt.jpg
 [bandsawn]: ../pics/bandsawn.jpg
 [drilled]: ../pics/drilled.jpg
-[drilled2]: ../pics/drilled2.jpg
 [mortise]: ../pics/mortise.jpg
 [drying]: ../pics/drying.jpg
 [finished]: ../pics/finished_lying.jpg
