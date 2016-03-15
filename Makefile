@@ -2,9 +2,9 @@
 
 .DEFAULT_GOAL := all
 
-opgaver=$(patsubst %.mkdn,out/%.html, $(wildcard exmkdn/*.mkdn))
+sources=$(patsubst %.mkdn,out/%.html, $(wildcard exmkdn/*.mkdn))
 
-all: $(opgaver)
+all: $(sources)
 
 out/%.html: %.mkdn pandoc.html.format
 	pandoc -Ss --highlight-style zenburn -o $@ $< --template pandoc.html.format
