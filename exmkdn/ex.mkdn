@@ -4,23 +4,23 @@ I decided a good project for me would be making a mallet. I had a reasonably
 sized block of walnut lying around from my school days, and I needed one, as I
 was using a plastic hammer with far too little heft. Generally speaking, the
 less mass a tool has, the faster you will end up moving it to generate the same
-momentum before contact. Momentum is $mass \cdot velocity$, so this compensation
-is quite natural. For humans, higher velocity tends to mean less control, so the
+momentum before contact. Momentum is $mass \cdot velocity$, so this is a natural
+compensation. For humans, higher velocity tends to mean less control, so the
 weight of a tool can make a lot of a difference, especially for delicate work,
-such as chiseling out dovetails in endgrain.
+such as chiseling out dovetails in end-grain.
+You can see the plastic hammer and mallet parts side-by-side in the pictures
+below.
 
 Of course a wooden mallet is also more traditional, and undeniably more
 aesthetic than their synthetic counterparts.
 
 As all things should, this project started out with a little research and
 inspiration, these pieces are the ones that stood out for me.
-Steve Schuler's and Paul Sellers' are quite alike (with the latter made from beautiful,
-beautiful spalted pecan wood).
+Steve Schuler's and Paul Sellers' are alike with the latter made from beautiful,
+beautiful spalted pecan wood (Schuler's design is adapted from Sellers').
+Steve Ramsey's stands out with a beautiful, faceted, maple head.
 
-Steve Ramsey's stands out with a faceted head, and being made from maple it is
-quite beautiful.
-
-In the end, I went with Seller's design for the heft, and rugged look.
+In the end, I went with Sellers' design for the heft, and rugged look.
 
 - [Paul sellers'
   blog](https://paulsellers.com/2015/01/the-mallet-making-video-is-on-youtube/)
@@ -44,7 +44,7 @@ keeping the mallet together!
 
 ![Head and handle, bandsawn] [bandsawn]
 
-The striking surfaces of the head have a more aggressive taper. I'm not sure how
+The striking surfaces of the head are tapered more aggressively. I'm not sure how
 this affects the feel of the mallet, but it helps in making the edges and
 corners obtuse in the final result (later, the head's top face will be rounded).
 Sharp angles are weak and prone to breakage. They are also problematic with
