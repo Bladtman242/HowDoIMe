@@ -2,11 +2,13 @@
 
 .DEFAULT_GOAL := all
 
-sources=$(patsubst %.mkdn,out/%.html, $(wildcard exmkdn/*.mkdn))
+source_files=$(shell find source -type f -name '*.mkdn')
 
-all: $(sources)
+dest_files=$(patsubst source/%.mkdn,out/%.html, $(source_files))
 
-out/%.html: %.mkdn pandoc.html.format
+all: $(dest_files)
+
+out/%.html: source/%.mkdn pandoc.html.format
 	pandoc -Ss --highlight-style zenburn -o $@ $< --template pandoc.html.format
 
 sync: $(all)

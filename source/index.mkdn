@@ -1,0 +1,30 @@
+#Me
+
+My name is Sigurt, here I'll be writing about how I me.  
+I'll be posting about this and that, so no common theme, though I imagine it
+will be mostly joinery, computer science, and programming.
+As a matter of fact, this blog is one project I expect to be writing about soon.
+I will be developing it side-by-side with publishing on it. And if I end up with
+something worthwhile, I might make a real framework/tool for building blogs in
+this way.
+
+This is [me on twitter.](http://twitter.com/bladtman)
+
+<br><br>
+
+#Posts
+
+---
+
+##A Joiner's Mallet in Walnut
+
+I decided a good project for me would be making a mallet. I had a reasonably
+sized block of walnut lying around from my school days, and I needed one. I'd
+been using a plastic hammer with far too little heft. Generally speaking, the
+less mass a tool has, the faster you will end up moving it to generate the
+same ...
+
+[Read more](blog/mallet.html)
+
+---
+

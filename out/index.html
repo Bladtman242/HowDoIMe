@@ -1,6 +1,6 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"$if(lang)$ lang="$lang$" xml:lang="$lang$"$endif$>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -46,58 +46,20 @@
     }
   </style>
   <font face="helvetica"></font>
-$for(author-meta)$
-  <meta name="author" content="$author-meta$" />
-$endfor$
-$if(date-meta)$
-  <meta name="date" content="$date-meta$" />
-$endif$
-  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+  <title></title>
   <style type="text/css">code{white-space: pre;}</style>
-$if(quotes)$
-  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
-$endif$
-$if(highlighting-css)$
-  <style type="text/css">
-$highlighting-css$
-  </style>
-$endif$
-$for(css)$
-  <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
-$endfor$
-$if(math)$
-  $math$
-$endif$
-$for(header-includes)$
-  $header-includes$
-$endfor$
 </head>
 <body>
-$for(include-before)$
-$include-before$
-$endfor$
-$if(title)$
-<div id="$idprefix$header">
-<h1 class="title">$title$</h1>
-$if(subtitle)$
-<h1 class="subtitle">$subtitle$</h1>
-$endif$
-$for(author)$
-<h2 class="author">$author$</h2>
-$endfor$
-$if(date)$
-<h3 class="date">$date$</h3>
-$endif$
-</div>
-$endif$
-$if(toc)$
-<div id="$idprefix$TOC">
-$toc$
-</div>
-$endif$
-$body$
-$for(include-after)$
-$include-after$
-$endfor$
+<h1 id="me">Me</h1>
+<p>My name is Sigurt, here I’ll be writing about how I me.<br />
+I’ll be posting about this and that, so no common theme, though I imagine it will be mostly joinery, computer science, and programming. As a matter of fact, this blog is one project I expect to be writing about soon. I will be developing it side-by-side with publishing on it. And if I end up with something worthwhile, I might make a real framework/tool for building blogs in this way.</p>
+<p>This is <a href="http://twitter.com/bladtman">me on twitter.</a></p>
+<p><br><br></p>
+<h1 id="posts">Posts</h1>
+<hr />
+<h2 id="a-joiners-mallet-in-walnut">A Joiner’s Mallet in Walnut</h2>
+<p>I decided a good project for me would be making a mallet. I had a reasonably sized block of walnut lying around from my school days, and I needed one. I’d been using a plastic hammer with far too little heft. Generally speaking, the less mass a tool has, the faster you will end up moving it to generate the same …</p>
+<p><a href="blog/mallet.html">Read more</a></p>
+<hr />
 </body>
 </html>
