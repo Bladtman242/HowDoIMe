@@ -5,7 +5,7 @@
 source_files=$(shell find source -type f -name '*.mkdn')
 
 # replicate source/ folder structure in out/
-$(shell find source/* -type d | sed 's/source\//out\//' | xargs mkdir)
+$(shell find source/* -type d | sed 's/source\//out\//' | xargs mkdir 2>/dev/null)
 
 dest_files=$(patsubst source/%.mkdn,out/%.html, $(source_files))
 
