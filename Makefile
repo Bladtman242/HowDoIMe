@@ -4,9 +4,12 @@
 
 source_files=$(shell find source -type f -name '*.mkdn')
 
+# replicate source/ folder structure in out/
+$(shell find source/* -type d | sed 's/source\//out\//' | xargs mkdir)
+
 dest_files=$(patsubst source/%.mkdn,out/%.html, $(source_files))
 
-all: $(dest_files)
+all: $(dest_folders) $(dest_files)
 
 out/%.html: source/%.mkdn pandoc.html.format
 	pandoc -Ss --highlight-style zenburn -o $@ $< --template pandoc.html.format
