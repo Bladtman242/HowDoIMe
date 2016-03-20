@@ -1,0 +1,20 @@
+#Repairing an Ebony Jewelry Box
+
+This project is of a slightly more personal nature than usual.  
+My great-grandfather, whom I've gotten to meet, made jewelry boxes for my mother
+and her sister. The boxes he made for them are small and made out of ebony. They
+have a lid, with a metal 'G' and 'B' inlaid for their names respectively.
+
+After half a century, the box he made for my mother has fallen apart. I've
+gotten quite a few of my tools from the workshop in my grandmother's basement,
+which means they were owned by the same great-grandfather who build those boxes
+--- maybe even _to_ build them --- and so when my mother showed it to me
+recently, I was exited about the chance to work on it, and about the feeling of
+family continuity it imparted.
+
+The box is simply built, relying solely on butt- and miter-joints. Most of the
+joints are end-grain to side-grain. It seems to me that the lack of mechanical
+strength in these joints is why the box didn't hold. Ebony expands/contracts a
+lot with changing humidity, and in this case, the stress it generated literally
+tore the glue bonds apart.
+
