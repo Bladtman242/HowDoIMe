@@ -8,10 +8,10 @@
   <style>
     body{
       margin: auto;
-      width: 80ex;
+      width: 65ex;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
-      font-size: 18px;
+      font-size: 21px;
       line-height: 1.6;
       color: rgba(0,0,0,0.8);
       background-color: #FAFAFA;
@@ -33,7 +33,7 @@
     }
     img {
       display: block;
-      width: 80ex;
+      width: 65ex;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 0px;
