@@ -3,7 +3,9 @@
 This project is of a slightly more personal nature than usual.  
 My great-grandfather, whom I've gotten to meet, made jewelry boxes for my mother
 and her sister. The boxes he made for them are small and made out of ebony. They
-have a lid, with a metal 'G' and 'B' inlaid for their names respectively.
+have a lid, with a metal 'G' and 'B' inlaid for their names respectively. An
+extra lid, resting on a small pillar in each corner of the box, separates two
+compartments in the box.
 
 After half a century, the box he made for my mother has fallen apart. I've
 gotten quite a few of my tools from the workshop in my grandmother's basement,
@@ -14,7 +16,10 @@ family continuity it imparted.
 
 The box is simply built, relying solely on butt- and miter-joints. Most of the
 joints are end-grain to side-grain. It seems to me that the lack of mechanical
-strength in these joints is why the box didn't hold. Ebony expands/contracts a
-lot with changing humidity, and in this case, the stress it generated literally
-tore the glue bonds apart.
+strength in these joints --- and the small surface of the glued areas --- is why
+the box didn't hold. Ebony expands/contracts a lot with changing humidity, and
+in this case, the stress it created literally tore the glue bonds apart.
 
+![The box as I recieved it. The folding rule is graduated in centimeters][initial-assembly]
+
+[initial-assembly]: ../../npics/initial_assembly.jpg
