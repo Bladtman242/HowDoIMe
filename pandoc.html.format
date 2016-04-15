@@ -5,10 +5,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <style>
     body{
-      margin: auto;
-      width: 65ex;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
       font-size: 21px;
@@ -31,9 +30,13 @@
     p {
       font-family: medium-content-serif-font, Georgia, Cambria, 'Times New Roman', Times, serif;
     }
+    article {
+      margin: auto;
+      margin-top: 100px;
+      margin-bottom: 130px;
+    }
     img {
       display: block;
-      width: 65ex;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 0px;
@@ -44,12 +47,44 @@
       font-style: italic;
 
     }
+    nav a {
+      color: black;
+      text-decoration: none;
+      font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+      font-weight: bold;
+    }
+    @media (min-width: 66ex) {
+      article {
+        width: 65ex;
+      }
+      img {
+        width: 65ex;
+      }
+      nav {
+        margin-top: 25px;
+        margin-left: 40px;
+      }
+    }
+    @media(max-width: 65ex) {
+      article {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+      nav {
+        padding-bottom: 0.5em;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: rgba(0,0,0,0.05);
+      }
+    }
   </style>
   <font face="helvetica"></font>
 $for(author-meta)$
   <meta name="author" content="$author-meta$" />
 $endfor$
-$if(date-meta)$
+$if(ate-meta)$
   <meta name="date" content="$date-meta$" />
 $endif$
   <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
@@ -73,6 +108,10 @@ $for(header-includes)$
 $endfor$
 </head>
 <body>
+<nav>
+<a href="/">How do I Me<a>
+</nav>
+<article>
 $for(include-before)$
 $include-before$
 $endfor$
@@ -99,5 +138,6 @@ $body$
 $for(include-after)$
 $include-after$
 $endfor$
+</article>
 </body>
 </html>
