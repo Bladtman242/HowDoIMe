@@ -1,4 +1,6 @@
-#A Joiner's Mallet in Walnut
+---
+title: A Joiner's Mallet in Walnut
+---
 
 I decided a good project for me would be making a mallet. I had a reasonably
 sized block of walnut lying around from my school days, and I needed one. I'd
@@ -117,7 +119,7 @@ that the end-grain will split, leaving a mushy cavity in lieu of a striking
 surface. Walnut does, however, have strength properties very similar to oak, so
 I think I will be fine.
 
-When I've used it a couple weeks, and the wood as settled/shrunk/expanded, I'll
+When I've used it a couple weeks, and the wood has settled/shrunk/expanded, I'll
 take the handle out and plane it down until it only protrudes a few millimeters
 from the top of the head. I'll probably have to give it another coat of oil
 then, but that's okay. I'm not satisfied with how I've broken the edges on the
