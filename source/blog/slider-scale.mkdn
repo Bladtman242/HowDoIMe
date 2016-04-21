@@ -13,17 +13,18 @@ slider may
 relationship between slider and data -->
 represent no change in the underlying data, and small portions may represent
 huge changes in the data. The article suggests solving these problems with the
-use of logarithmic or exponential scales, based on the observation that
-real-world data often fits these curves better than linear functions.
+use of biased, logarithmic, or exponential scales.
 
-I propose an alternative solution, that might be more general. In fact, I expect
+Real-world data often fit nicely on either a logarithmic or exponential curve,
+but not always. I propose a method for creating biased scales --- a custom
+mapping from slider-positions to values in the underlying data. In fact, I expect
 this solution to fit _any_ dataset you might come up with.
 <!-- based on an idea from... -->
-Before I go further in-depth with the solution, here is a proof-of-concept.
 
 <script id="mustache-templ" type="x-tmpl-mustache">
-	<p>Filter value: {{maxvalue}}</p>
-	<p>Matching lenses: {{count}} of {{totaldata}}</p>
+	<p>Matching lenses: {{count}} of {{totaldata}}
+	<br>
+	Filter value: {{maxvalue}}</p>
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.3/mustache.min.js"></script>
 <script src="data.js"></script>
@@ -107,18 +108,62 @@ function init() {
 </script>
 
 ##Lenshawk lenses by focal length
-###Linear slider
-<div id="slider-linear-min"></div>
-<input id="slider-linear" type="range" oninput="sliderUpdate(event.target.id)">
-<div id="slider-linear-max"></div>
+Before I go further in-depth with the solution, I'll present a proof-of-concept.
+The two sliders below simulate filtering on the freely available Lens Hawk
+dataset, referenced in the Baymard article. For simplicity, instead of showing
+all the lenses that match the filter, the number of matches is displayed.
+
+According to the article, Lens hawk uses an exponential scale for filtering on
+focal length. You can try it out [here](http://lenshawk.com/).  
+_(Note that the
+focal-length scale differs somehow. Their scale is 4-800, mine is 45-8000. For
+reference, I took the focal_length_low_floatinger column from their database.)_
+<!-- _--> <!-- somehow this fixes an issue in my syntax highlighter for markdown
+-->
+
+---
+
+**Linear slider**
+
+<span id="slider-linear-min"></span>
+<input id="slider-linear" type="range" style="width:33%;" oninput="sliderUpdate(event.target.id)">
+<span id="slider-linear-max"></span>
 <div id="slider-linear-contentpane"></div>
 
-###Equalized slider
-<div id="slider-equalized-min"></div>
-<input id="slider-equalized" type="range" oninput="sliderUpdate(event.target.id)">
-<div id="slider-equalized-max"></div>
+**Biased slider**
+
+<span id="slider-equalized-min"></span>
+<input id="slider-equalized" type="range" style="width:33%" oninput="sliderUpdate(event.target.id)">
+<span id="slider-equalized-max"></span>
 <div id="slider-equalized-contentpane"></div>
 
 <script>init()</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+---
+
+We can immediately see that, at the middle of the slider, the linear scale
+matches $548/561$ lenses ($98\%$), where the biased scale matches $269/561$
+lenses ($48\%$).
+
+This means the right half of the linear-scale slider is used for only $2\%$ of the items,
+while the remaining $98\%$ is crammed into the left half. If you play with the
+sliders a little, you will notice that the linear scale puts most of the lenses
+within the first $\sim20\%$ of the slider, while the biased scale distributes the
+lenses quite evenly.
+
+So does the biased scale above provide a better user experience? While it seems
+like a vast improvement on the linear scale, it shifts the focus.
+<!--  values vs. slice of data-set. The user will likely have a value in mind,
+and it might still be hard (or even impossible!) to find it on he biased scale
+-->
+<!-- possible to find a weighting between slice-distribution and value-intution?
+-->
+
+
+##How it was done
+
+<!-- histogram eq, image contrast analogy
+show plot of distributions! (already made, in repo)
+Also link to js/awk solution -->
