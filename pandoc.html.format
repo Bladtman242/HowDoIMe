@@ -35,17 +35,21 @@
       margin-top: 100px;
       margin-bottom: 130px;
     }
-    img {
+    article img {
       display: block;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 0px;
     }
-    .caption {
+    article .caption {
       line-height: 50%;
       font-size: 16px;
       font-style: italic;
 
+    }
+    article a {
+      color: rgba(0,0,0,0.8);
+      text-decoration: underline;
     }
     nav a {
       color: black;
@@ -109,7 +113,7 @@ $endfor$
 </head>
 <body>
 <nav>
-<a href="/">How do I Me<a>
+<a href="/">How do I Me</a>
 </nav>
 <article>
 $for(include-before)$
