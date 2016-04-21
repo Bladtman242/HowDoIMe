@@ -2,6 +2,25 @@
 title: Slider scaling
 ---
 
+This is a (very, very, very delayed) response to [Baymard
+Institute's](http://baymard.com/) article on [slider
+inputs](http://baymard.com/blog/slider-interfaces). The article goes far beyond
+what will be considered here --- and you should read it --- but in summary,
+linear slider scales provide a poor user experience, because the underlying data
+is rarely a uniform distribution. This creates two problems; large portions of the
+slider may
+<!-- you need to introduce the idea of change in the data the filtering
+relationship between slider and data -->
+represent no change in the underlying data, and small portions may represent
+huge changes in the data. The article suggests solving these problems with the
+use of logarithmic or exponential scales, based on the observation that
+real-world data often fits these curves better than linear functions.
+
+I propose an alternative solution, that might be more general. In fact, I expect
+this solution to fit _any_ dataset you might come up with.
+<!-- based on an idea from... -->
+Before I go further in-depth with the solution, here is a proof-of-concept.
+
 <script id="mustache-templ" type="x-tmpl-mustache">
 	<p>Filter value: {{maxvalue}}</p>
 	<p>Matching lenses: {{count}} of {{totaldata}}</p>
@@ -87,14 +106,14 @@ function init() {
 
 </script>
 
-#Lenshawk lenses by focal length
-##Linear slider
+##Lenshawk lenses by focal length
+###Linear slider
 <div id="slider-linear-min"></div>
 <input id="slider-linear" type="range" oninput="sliderUpdate(event.target.id)">
 <div id="slider-linear-max"></div>
 <div id="slider-linear-contentpane"></div>
 
-##Equalized slider
+###Equalized slider
 <div id="slider-equalized-min"></div>
 <input id="slider-equalized" type="range" oninput="sliderUpdate(event.target.id)">
 <div id="slider-equalized-max"></div>
