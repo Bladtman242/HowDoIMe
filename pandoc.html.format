@@ -17,6 +17,7 @@
     }
     H1, H2, H3 {
       font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+      margin-top:30px;
     }
     H1{
       font-size: 30px;
@@ -32,7 +33,7 @@
     }
     article {
       margin: auto;
-      margin-top: 100px;
+      margin-top: 70px;
       margin-bottom: 130px;
     }
     article img {
@@ -72,6 +73,7 @@
     @media(max-width: 65ex) {
       article {
         width: 100%;
+        margin-top:50px;
       }
       img {
         width: 100%;
