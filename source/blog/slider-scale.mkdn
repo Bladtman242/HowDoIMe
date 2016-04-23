@@ -167,3 +167,7 @@ and it might still be hard (or even impossible!) to find it on he biased scale
 <!-- histogram eq, image contrast analogy
 show plot of distributions! (already made, in repo)
 Also link to js/awk solution -->
+
+![Distribution of lenses over focal-length] [histograms]
+
+[histograms]: ../pics/plot.png
