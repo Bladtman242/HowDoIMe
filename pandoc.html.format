@@ -16,7 +16,6 @@
       background-color: #FAFAFA;
     }
     H1, H2, H3 {
-      padding-bottom: 1.6em;
       font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
       margin-top:30px;
     }
