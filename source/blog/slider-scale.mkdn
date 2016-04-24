@@ -154,7 +154,19 @@ within the first $\sim20\%$ of the slider, while the biased scale distributes th
 lenses quite evenly.
 
 So does the biased scale above provide a better user experience? While it seems
-like a vast improvement on the linear scale, it shifts the focus.
+like a vast improvement on the linear scale, it shifts the focus. On the linear
+scale, it is difficult to control the number of matching items, but on the
+biased scale, it is difficult to control the exact filter value!
+
+If the relationship between the number of matched items and the filter value can
+be made obvious to the users, the biased scale is a huge improvement. If users
+know of this relationship, it should be easy to see that, for a
+less-than-or-equal filter, the highest value lower than the wanted max matches
+the exact same items as the wanted max value. But if this cannot be made
+obvious, my guess is most people would find the biased scale unintuitive. Of
+course, this is just conjecture. This is where the logarithmic or exponential
+scales win; their smoothness seems to make them easier to use and understand.
+Probably, a solution that weighs smoothness against scale utilization is possible.
 <!--  values vs. slice of data-set. The user will likely have a value in mind,
 and it might still be hard (or even impossible!) to find it on he biased scale
 -->
@@ -169,5 +181,7 @@ show plot of distributions! (already made, in repo)
 Also link to js/awk solution -->
 
 ![Distribution of lenses over focal-length] [histograms]
+
+The figure above contains all the information necessary to understand (and solve) the problem of scale utilization.
 
 [histograms]: ../pics/plot.png
