@@ -137,9 +137,8 @@ reference, I took the focal_length_low_floatinger column from their database.)
 <input id="slider-equalized" type="range" style="width:33%" oninput="sliderUpdate(event.target.id)">
 <span id="slider-equalized-max"></span>
 
-<script>init()</script>
+<script>document.onload=init()</script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 ---
 <br>
@@ -149,8 +148,8 @@ lenses ($48\%$).
 
 This means the right half of the linear-scale slider is used for only $2\%$ of the items,
 while the remaining $98\%$ is crammed into the left half. If you play with the
-sliders a little, you will notice that the linear scale puts most of the lenses
-within the first $\sim20\%$ of the slider, while the biased scale distributes the
+sliders a little, you will notice that the linear scale puts nearly all of the lenses
+within the first $\sim12\%$ of the slider, while the biased scale distributes the
 lenses quite evenly.
 
 So does the biased scale above provide a better user experience? While it seems
@@ -159,13 +158,16 @@ scale, it is difficult to control the number of matching items, but on the
 biased scale, it is difficult to control the exact filter value!
 
 If the relationship between the number of matched items and the filter value can
-be made obvious to the users, the biased scale is a huge improvement. If users
-know of this relationship, it should be easy to see that, for a
-less-than-or-equal filter, the highest value lower than the wanted max matches
-the exact same items as the wanted max value. But if this cannot be made
-obvious, my guess is most people would find the biased scale unintuitive. Of
-course, this is just conjecture. This is where the logarithmic or exponential
-scales win; their smoothness seems to make them easier to use and understand.
+be made apparent, the biased scale is a huge improvement. When you know of this
+relationship, it is easy to see that, for a less-than-or-equal filter, the
+highest value lower than the wanted max matches the exact same items as the
+wanted max value. But my guess is most people would find the biased scale
+unintuitive, and be annoyed that they can't pick the exact value they want. Of
+course, this is just conjecture.
+
+This is where the logarithmic or exponential
+scales win; their smoothness seems to make them easier to use and understand,
+despite the non-linearity.
 Probably, a solution that weighs smoothness against scale utilization is possible.
 <!--  values vs. slice of data-set. The user will likely have a value in mind,
 and it might still be hard (or even impossible!) to find it on he biased scale
@@ -176,12 +178,41 @@ and it might still be hard (or even impossible!) to find it on he biased scale
 
 ##Histogram Equalization
 
+A common problem in image processing is contrast adjustment. Contrast adjustment
+is used for example by photographers, for aesthetic purposes, and scientist have
+found use for it in image segmentation, which is important used for things like
+computer vision and medical image analysis (If you've ever had an MRI, CT, or X-ray,
+the resulting images have likely been histogram-equalized).
+
+Histogram equalization works for a lot of different data, but the canonical
+example is monochrome images. Pixels in a monochrome image can have values
+between the two extremes; black and white. But just like we didn't have lenses
+with every possible focal length between 4.5 and 8000 in the Lenshawk example,
+you can have images that don't utilize the space between black and white very
+well. It might be that there are no or few values in the brighter end of the
+spectrum (much like our Lenshawk example), or it might be that there are mostly
+very dark and bright values, but not much in between.
+
+Histogram equalization is used to assign new values to the image pixels, to
+better utilize the spectrum.
+
+There is a very direct correspondence between the problem of contrast
+adjustment, and our problem of slider scaling. In contrast adjustment, we want
+to maximize the use of the colour-range. In slider scaling, we want to make
+optimum use of our filter values --- focal length in our case.
+
+There is an important difference between the two problems though. In contrast
+adjustment we may change the actual colours in the image, but in slider
+scaling we may not adjust the values of the items we are filtering. As it turns
+out, this is not a big problem --- we don't want to change the underlying
+values, just how our slider maps to them!
+
 <!-- histogram eq, image contrast analogy
 show plot of distributions! (already made, in repo)
 Also link to js/awk solution -->
 
 ![Distribution of lenses over focal-length] [histograms]
 
-The figure above contains all the information necessary to understand (and solve) the problem of scale utilization.
+
 
 [histograms]: ../pics/plot.png
