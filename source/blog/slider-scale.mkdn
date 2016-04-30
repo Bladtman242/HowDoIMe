@@ -21,7 +21,6 @@ always. I propose the use of histogram equalization for creating biased scales
 --- a custom mapping from slider-positions to values in the underlying data. In
 fact, I expect this solution to fit _any_ dataset you might come up with.
 
-
 ##Lenshawk lenses by focal length
 
 Before I go further in-depth with the solution, let's see an example.
@@ -50,8 +49,6 @@ focal length. You can try it out [here](http://lenshawk.com/).
 <span id="slider-equalized-min"></span>
 <input id="slider-equalized" type="range" style="width:33%" oninput="sliderUpdate(event.target.id)">
 <span id="slider-equalized-max"></span>
-
-
 
 ---
 <br>
@@ -114,36 +111,51 @@ scaling we may not adjust the values of the items we are filtering. As it turns
 out, this is not a big problem --- we don't want to change the underlying
 values, just how our slider maps to them!
 
-
-![Distribution of lenses over focal-length] [histograms]
+![Distribution of lenses over focal-length ] [orig_histograms]
 
 In order understand how histogram equalization can help (and what it is), let's
 take a closer look at the problem. The figure above shows the frequency and
 cumulative frequency of different focal lengths, normalized to 1. As you can
 see, most of the lenses, by far, lie in the $[0,1000]$ range, while the
-$[6000,8000]$ range is almost empty! Ideally, we want the cumulative frequency to be a
-line. That would mean the data was uniformly distributed, and thus all
+$[6000,8000]$ range is almost empty! Ideally, we want the cumulative frequency
+to be a line. That would mean the data was uniformly distributed, and thus all
 equal-sized segments on the slider would cover the same number of items. In the
 Lenshawk dataset, the cumulative frequency looks like a log curve, not a line.
 
-<!-- first explain histoeq for contrast, then explain how to use it for slider
-scale -->
+The histogram equalization algorithm works as follows:
 
-The histogram equalization algorithm works as follows:  
-Build the normalized frequency histogram of the original data (focal lengths in our case).  
-Use it to build the cumulative distribution function. For every value $x$, this
-is just the sum of the frequencies for the values less than or equal to $x$.  
-Scale and translate the cdf to the range of the original data.  
-We now have a function mapping values from the original data, to
+1.  Go through the data, for each unique value, store the number of times
+    that value occurs, divided by the size of the data set. This gives us the
+    frequency histogram above. We can see this as a function from focal-length
+    to the percentage of lenses with that focal length.
+
+2. Go trough the histogram, in order of increasing value, and store for each
+   value the sum of the frequencies for all values smaller than or equal to
+   the value. This gives us the cumulative frequency function as above. We can
+   see this as a function from focal length to the percentage of lenses with
+   that or a smaller focal length.
+
+3. Scale and translate the cumulative frequencies from the $[0,1]$ range, to the
+   wanted range. For contrast adjustment, it would generally be the range of
+   possible color values in the image format. In our case, it's the range of slider
+   inputs, $[0,8000]$. We can see this as a function from focal length, to a
+   focal length in an imagined data set, that is more evenly distributed.
+
+Normally, you would create a new data set by applying the resulting mapping to
+each value in the original data. For slider scaling however, we simply pretend
+that our slider _is_ the new data set, and then use the inverse of the mapping
+to get the value represented by a point on the slider!
 
 ![Equalized distribution of lenses over focal-length] [eq_histograms]
 
+If we pretend that we did build a new data set, and then calculate the frequency
+histogram and cumulative frequency of it, we get the figure above.
 
-[histograms]: ../pics/original_plot.png
+[orig_histograms]: ../pics/original_plot.png
 [eq_histograms]: ../pics/equalized_plot.png
 
 ###Footnotes
-[^1]: Very
+[^1]: very very very
 
 <script id="mustache-templ" type="x-tmpl-mustache">
 	<p>Filter value: {{maxvalue}}
