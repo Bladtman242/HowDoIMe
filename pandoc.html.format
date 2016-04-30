@@ -31,6 +31,14 @@
     p {
       font-family: medium-content-serif-font, Georgia, Cambria, 'Times New Roman', Times, serif;
     }
+    .date {
+      margin-bottom: -30px;
+      opacity: 0.05;
+      transition-duration: 0.5s;
+    }
+    .date:hover {
+      opacity: 1;
+    }
     article {
       margin: auto;
       margin-top: 70px;
@@ -121,6 +129,9 @@ $endfor$
 $for(include-before)$
 $include-before$
 $endfor$
+$if(date)$
+<h3 class="date"><small>$date$</small></h3>
+$endif$
 $if(title)$
 <div id="$idprefix$header">
 <h1 class="title">$title$</h1>
@@ -130,9 +141,6 @@ $endif$
 $for(author)$
 <h2 class="author">$author$</h2>
 $endfor$
-$if(date)$
-<h3 class="date">$date$</h3>
-$endif$
 </div>
 $endif$
 $if(toc)$
