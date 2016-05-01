@@ -1,5 +1,6 @@
 ---
 title: Slider scaling
+date: May 01, 2016
 ---
 
 This is a (very, very, very[^1] delayed) response to an [article on slider
@@ -150,6 +151,9 @@ to get the value represented by a point on the slider!
 
 If we pretend that we did build a new data set, and then calculate the frequency
 histogram and cumulative frequency of it, we get the figure above.
+The frequencies are he exact same as before, but are distributed differently
+over the focal lengths (which are really slider positions now). The cumulative
+frequency is a lot more linear than originally.
 
 [orig_histograms]: ../pics/original_plot.png
 [eq_histograms]: ../pics/equalized_plot.png
