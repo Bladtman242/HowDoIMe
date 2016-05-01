@@ -1,6 +1,6 @@
 ---
 title: A Joiner's Mallet in Walnut
-date: March 7 2016
+date: March 7, 2016
 ---
 
 I decided a good project for me would be making a mallet. I had a reasonably
@@ -127,11 +127,11 @@ then, but that's okay. I'm not satisfied with how I've broken the edges on the
 handle anyway, and it gives an opportunity to fix that.
 
 
-[block-walnut]: ../pics/initial_planing_opt.jpg
-[bandsawn]: ../pics/bandsawn.jpg
-[drilled]: ../pics/drilled.jpg
-[mortise]: ../pics/mortise.jpg
-[drying]: ../pics/drying.jpg
-[finished]: ../pics/finished_lying.jpg
-[finished-stand]: ../pics/finished_standing.jpg
-[finished-end]: ../pics/finished_end.jpg
+[block-walnut]: mallet-assets/initial_planing_opt.jpg
+[bandsawn]: mallet-assets/bandsawn.jpg
+[drilled]: mallet-assets/drilled.jpg
+[mortise]: mallet-assets/mortise.jpg
+[drying]: mallet-assets/drying.jpg
+[finished]: mallet-assets/finished_lying.jpg
+[finished-stand]: mallet-assets/finished_standing.jpg
+[finished-end]: mallet-assets/finished_end.jpg

@@ -4,8 +4,9 @@
 
 source_files=$(shell find source -type f -name '*.mkdn')
 
-# replicate source/ folder structure in out/
-$(shell find source/* -type d | sed 's/source\//out\//' | xargs mkdir 2>/dev/null)
+# replicate source/ folder structure in out/, and copy non-markdown files
+# (assets) into out
+$(shell cd source; rsync -r --exclude '*.mkdn' . ../out/)
 
 dest_files=$(patsubst source/%.mkdn,out/%.html, $(source_files))
 
