@@ -89,7 +89,7 @@ they could not pick e.g. $174$. Of course, this is just conjecture.
 It might be that it is easy for people to see that, for a less-than-or-equal
 filter, the highest value lower than the wanted max matches the exact same items
 as the wanted max value --- the only way to find out would be a user study,
-which is outside of both the scope of this post, and of my comfort zone.
+which is outside of both the scope of this post, and my comfort zone.
 
 This is where the logarithmic or exponential scales are at an advantage; their
 smoothness seems to make them easier to use and understand, despite the
