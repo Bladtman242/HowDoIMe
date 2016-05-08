@@ -18,9 +18,14 @@ the slider may represent no change in the filtering, and small portions may
 represent huge changes in the filtering. The article suggests solving these
 problems with the use of biased, logarithmic, or exponential scales. Real-world
 data often fits nicely on either a logarithmic or exponential curve, but not
-always. I propose the use of histogram equalization for creating biased scales
---- a custom mapping from slider-positions to values in the underlying data. In
-fact, I expect this solution to fit _any_ dataset you might come up with.
+always. In fact, for any function we can come up with, there must exist a
+dataset that does not fit it! This means we cannot simply rely on linear,
+logarithmic, or exponential functions to save our day. In particular, we can not
+expect _the same_ linear, logarithmic, or exponential function to fit all our
+data sets --- we would generally have to tweak them to our use case.
+I propose the use of histogram equalization for creating biased scales --- a
+custom mapping from slider-positions to values in the underlying data. In fact,
+I expect this solution to fit _any_ dataset you might come up with.
 
 ##Lenshawk lenses by focal length
 
@@ -82,7 +87,23 @@ scales win; their smoothness seems to make them easier to use and understand,
 despite the non-linearity.
 Probably, a solution that weighs smoothness against scale utilization is possible.
 
+For now, let's look at a method to create a biased scale for any data set,
+without manual tweaking.
+
 ##Histogram Equalization
+
+Recall that a slider-scale is simply a mapping from slider position to a
+threshold value in the underlying data.  
+A biased scale is just such a mapping, tailored to your data.
+The properties we are looking for in this mapping are:
+
+1. Scale utilization; we wish to use the entire slider, not have all our data
+   points clustered in one end.
+2. Smoothness of distribution; we do not want the data to be clustered in small
+   sections of the slider, making the slider overly sensitive. Conversely, we do
+   not want large sections of the slider that does not change the filtering.
+
+As it turns out, these properties are valued in contrast adjustment as well.
 
 A common problem in image processing is contrast adjustment. Contrast adjustment
 is used for example by photographers, for aesthetic purposes, and scientist have
@@ -104,17 +125,19 @@ better utilize the spectrum.
 There is a direct correspondence between the problem of contrast
 adjustment, and our problem of slider scaling. In contrast adjustment, we want
 to maximize the use of the colour-range. In slider scaling, we want to maximize
-the use of our slider range. Same thing, kind of.
+the use of our slider range --- two seemingly equivalent problems.
 
-There is an important difference between the two problems. In contrast
-adjustment we may change the actual colours in the image, but in slider
-scaling we may not adjust the values of the items we are filtering. As it turns
-out, this is not a big problem --- we don't want to change the underlying
+There _is_ an important difference between the two problems. In contrast
+adjustment we may (and will) change the actual colours in the image, but in
+slider scaling we may not adjust the values of the items we are filtering ---
+if we are filtering products based on price, it would be problematic to change
+our prices to fit our slider.
+As it turns out, this is not a big problem --- we don't change the underlying
 values, just how our slider maps to them!
 
 ![Distribution of lenses over focal-length ] [orig_histograms]
 
-In order understand how histogram equalization can help (and what it is), let's
+In order to understand how histogram equalization can help (and what it is), let's
 take a closer look at the problem. The figure above shows the frequency and
 cumulative frequency of different focal lengths, normalized to 1. As you can
 see, most of the lenses, by far, lie in the $[0,1000]$ range, while the
