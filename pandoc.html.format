@@ -28,7 +28,7 @@
     H3{
       font-size: 22px;
     }
-    p {
+    p, li {
       font-family: medium-content-serif-font, Georgia, Cambria, 'Times New Roman', Times, serif;
     }
     .date {
