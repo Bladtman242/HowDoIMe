@@ -23,9 +23,22 @@ var sliders = {
         if(slider == "slider-equalized") {
             var sliderval = document.getElementById(slider).value;
             var max=45;
+            var maxI=0;
+            //Find the filter value
             for(i=45; i <= sliderval; i++){
                 if(i in map){
+                    maxI=i;
                     max = map[i];
+                }
+            }
+            //Find the next valid index
+            var nextFilter=max;
+            var nextFilterI=maxI;
+            for(i=maxI+1; i<=8000; i++){
+                if(i in map) {
+                    nextFilter = map[i];
+                    nextFilterI = i;
+                    break;
                 }
             }
             data.forEach(function(p){
@@ -33,7 +46,19 @@ var sliders = {
                     points.length++;
                 }
             });
-            view.maxvalue = max;
+            if(nextFilterI == maxI) {
+                view.maxvalue = max;
+            } else {
+                view.maxvalue = Math.round(max + (nextFilter - max) * ((sliderval-maxI)/(nextFilterI - maxI)));
+                console.log("nextFilter: " + nextFilter);
+                console.log("max: " + max);
+                console.log("sliderval: " + sliderval);
+                console.log("maxI: " + maxI);
+                console.log("nextFilterI: " + nextFilterI);
+                console.log("maxI: " + maxI);
+                console.log("(sliderval-maxI)/(nextFilterI-maxI): " + (sliderval-maxI)/(nextFilterI-maxI));
+            }
+            //view.maxvalue = max;
             view.count = points.length;
             view.totaldata = data.length;
         }

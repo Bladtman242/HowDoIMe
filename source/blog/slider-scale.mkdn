@@ -76,19 +76,29 @@ biased scale, it is difficult to control the exact filter value!
 <!-- following section is sort of shite -->
 If the relationship between the number of matched items and the filter value can
 be made apparent, the biased scale is a huge improvement. When you know of this
-relationship, it is easy to see that, for a less-than-or-equal filter, the
-highest value lower than the wanted max matches the exact same items as the
-wanted max value. But my guess is most people would find the biased scale
-unintuitive, and be annoyed that they can't pick the exact value they want. Of
-course, this is just conjecture.
+relationship. You may have noticed that the biased scale seems a lot more
+jittery than the linear one. This is because I interpolate linearly between the
+positions that would actually change the filtering. For example, the filtering
+changes at value $170$, and again at $180$. Between those values, the filtering
+remains as if the slider was at $170$. Because of the way I created the biased
+scale (more on that later), the easiest thing would be for me to display a
+filter value of $170$ in that entire section of the slider. My guess is most
+people would find the resulting irregularity unintuitive, and be annoyed that
+they could not pick e.g. $174$. Of course, this is just conjecture.
 
-This is where the logarithmic or exponential
-scales win; their smoothness seems to make them easier to use and understand,
-despite the non-linearity.
-Probably, a solution that weighs smoothness against scale utilization is possible.
+It might be that it is easy for people to see that, for a less-than-or-equal
+filter, the highest value lower than the wanted max matches the exact same items
+as the wanted max value --- the only way to find out would be a user study,
+which is outside of both the scope of this post, and of my comfort zone.
+
+This is where the logarithmic or exponential scales are at an advantage; their
+smoothness seems to make them easier to use and understand, despite the
+non-linearity. Probably, a solution that weighs smoothness against scale
+utilization is possible.
 
 For now, let's look at a method to create a biased scale for any data set,
-without manual tweaking.
+without the manual tweaking that logarithmic and exponential scales sometimes
+require.
 
 ##Histogram Equalization
 
