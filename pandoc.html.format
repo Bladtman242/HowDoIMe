@@ -33,7 +33,7 @@
     }
     .date {
       margin-bottom: -30px;
-      opacity: 0.05;
+      opacity: 0.1;
       transition-duration: 0.5s;
     }
     .date:hover {
