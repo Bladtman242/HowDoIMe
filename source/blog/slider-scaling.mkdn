@@ -75,16 +75,16 @@ biased scale, it is difficult to control the exact filter value!
 
 <!-- following section is sort of shite -->
 If the relationship between the number of matched items and the filter value can
-be made apparent, the biased scale is a huge improvement. When you know of this
-relationship. You may have noticed that the biased scale seems a lot more
-jittery than the linear one. This is because I interpolate linearly between the
-positions that would actually change the filtering. For example, the filtering
-changes at value $170$, and again at $180$. Between those values, the filtering
-remains as if the slider was at $170$. Because of the way I created the biased
-scale (more on that later), the easiest thing would be for me to display a
-filter value of $170$ in that entire section of the slider. My guess is most
-people would find the resulting irregularity unintuitive, and be annoyed that
-they could not pick e.g. $174$. Of course, this is just conjecture.
+be made apparent, the biased scale is a huge improvement. You may have noticed
+that on the biased scale, the filter value seems more jittery than the
+linear one. This is because I interpolate linearly between the positions that
+would actually change the filtering. For example, the filtering changes at value
+$170$, and again at $180$. Between those values, the filtering remains as if the
+slider was at $170$. Because of the way I created the biased scale (more on that
+later), the easiest thing would be for me to display a filter value of $170$ in
+that entire section of the slider. My guess is most people would find the
+resulting irregularity unintuitive, and be annoyed that they could not pick e.g.
+$174$. Of course, this is just conjecture.
 
 It might be that it is easy for people to see that, for a less-than-or-equal
 filter, the highest value lower than the wanted max matches the exact same items
@@ -94,7 +94,7 @@ which is outside of both the scope of this post, and my comfort zone.
 This is where the logarithmic or exponential scales are at an advantage; their
 smoothness seems to make them easier to use and understand, despite the
 non-linearity. Probably, a solution that weighs smoothness against scale
-utilization is possible.
+utilization is possible[^2].
 
 For now, let's look at a method to create a biased scale for any data set,
 without the manual tweaking that logarithmic and exponential scales sometimes
@@ -103,21 +103,21 @@ require.
 ##Histogram Equalization
 
 Recall that a slider-scale is simply a mapping from slider position to a
-threshold value in the underlying data.  
+threshold value for the underlying data.
 A biased scale is just such a mapping, tailored to your data.
 The properties we are looking for in this mapping are:
 
 1. Scale utilization; we wish to use the entire slider, not have all our data
-   points clustered in one end.
+   points clustered in a segment of the slider.
 2. Smoothness of distribution; we do not want the data to be clustered in small
-   sections of the slider, making the slider overly sensitive. Conversely, we do
-   not want large sections of the slider that does not change the filtering.
+   sections of the slider, making the slider overly sensitive. Accordingly, we do
+   not want large sections of the slider that do not change the filtering.
 
 As it turns out, these properties are valued in contrast adjustment as well.
 
 A common problem in image processing is contrast adjustment. Contrast adjustment
 is used for example by photographers, for aesthetic purposes, and scientist have
-found use for it in image segmentation, which is important used for things like
+found use for it in image segmentation, which is used for things like
 computer vision and medical image analysis (If you've ever had an MRI, CT, or X-ray,
 the resulting images have likely been histogram-equalized).
 
@@ -158,12 +158,12 @@ Lenshawk dataset, the cumulative frequency looks like a log curve, not a line.
 
 The histogram equalization algorithm works as follows:
 
-1.  Go through the data, for each unique value, store the number of times
-    that value occurs, divided by the size of the data set. This gives us the
-    frequency histogram above. We can see this as a function from focal-length
-    to the percentage of lenses with that focal length.
+1. Go through the data. For each unique value, store the number of times
+   that value occurs, divided by the size of the data set. This gives us the
+   frequency histogram above. We can see this as a function from focal-length
+   to the percentage of lenses with that focal length.
 
-2. Go trough the histogram, in order of increasing value, and store for each
+2. Go trough the histogram in order of increasing value, and store for each
    value the sum of the frequencies for all values smaller than or equal to
    the value. This gives us the cumulative frequency function as above. We can
    see this as a function from focal length to the percentage of lenses with
@@ -172,13 +172,20 @@ The histogram equalization algorithm works as follows:
 3. Scale and translate the cumulative frequencies from the $[0,1]$ range, to the
    wanted range. For contrast adjustment, it would generally be the range of
    possible color values in the image format. In our case, it's the range of slider
-   inputs, $[0,8000]$. We can see this as a function from focal length, to a
-   focal length in an imagined data set, that is more evenly distributed.
+   inputs, $[0,8000]$. Conceptually, this gives us the same function as step 2,
+   just with the output in a range that is more useful to us.
 
 Normally, you would create a new data set by applying the resulting mapping to
-each value in the original data. For slider scaling however, we simply pretend
-that our slider _is_ the new data set, and then use the inverse of the mapping
-to get the value represented by a point on the slider!
+each value in the original data (normally called called back projection). For
+images, the value of each pixel in the resulting image would then be
+proportional to the percentage of pixels with a value less than or equal to that
+of the pixel in that same position in the original image. In other words; the
+new pixel values correspond to their placement in the original distribution of
+pixel values!
+
+For slider scaling however, we simply pretend that our slider _is_ the new data
+set, and then use the inverse of the mapping to get the value represented by a
+point on the slider!
 
 ![Equalized distribution of lenses over focal-length] [eq_histograms]
 
@@ -188,11 +195,28 @@ The frequencies are he exact same as before, but are distributed differently
 over the focal lengths (which are really slider positions now). The cumulative
 frequency is a lot more linear than originally.
 
-[orig_histograms]: slider-scale-assets/original_plot.png
-[eq_histograms]: slider-scale-assets/equalized_plot.png
+
+##Aftermath
+Histogram equalization seems like a viable technique for creating biased slider
+scales. The major advantage being that the technique is general, and can be
+applied without manual tweaking for individual data sets; one size fits all!
+
+Implementing histogram equalization is relatively simple, and running it
+relatively cheap, computationally speaking.
+
+Interested parties can find the (mostly undocumented) source code used for this
+post [here](https://github.com/Bladtman242/slider-histogram-equalization.git). I
+wrote the preprocessing in [Gawk](https://www.gnu.org/software/gawk/) (A
+decision I thoroughly regret), but porting to other languages should be
+straightforward.
+
+[orig_histograms]: slider-scaling-assets/original_plot.png
+[eq_histograms]: slider-scaling-assets/equalized_plot.png
 
 ###Footnotes
 [^1]: very very very
+[^2]: At some point in the future, I do a piece about using dynamic programming,
+instead of histogram equalization, to solve the problem of slider scaling.
 
 <script id="mustache-templ" type="x-tmpl-mustache">
 	<p>Filter value: {{maxvalue}}
@@ -200,6 +224,6 @@ frequency is a lot more linear than originally.
 	Matching lenses: {{count}} of {{totaldata}}</p>
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.3/mustache.min.js"></script>
-<script src="slider-scale-assets/data.js"></script>
-<script src="slider-scale-assets/sliders.js"></script>
+<script src="slider-scaling-assets/data.js"></script>
+<script src="slider-scaling-assets/sliders.js"></script>
 <script>document.onload=sliders.init()</script>
