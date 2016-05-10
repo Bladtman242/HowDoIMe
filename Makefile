@@ -6,7 +6,7 @@ source_files=$(shell find source -type f -name '*.mkdn')
 source_assets=$(shell find source -type f -not -name '*.mkdn')
 
 # replicate source/ folder structure in out/
-$(shell cd source; find -type d -not -empty -exec mkdir -p {} +)
+$(shell cd source; find * -type d -not -empty -exec mkdir -p ../out/'{}' \;)
 # replicate source/ folder structure in out/, and copy non-markdown files
 # (assets) into out
 #$(shell cd source; rsync -r --exclude '*.mkdn' . ../out/)
