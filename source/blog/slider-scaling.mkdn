@@ -1,6 +1,6 @@
 ---
 title: Slider scaling
-date: May 01, 2016
+date: May 10, 2016
 ---
 
 This is a (very, very, very[^1] delayed) response to an [article on slider

@@ -12,13 +12,22 @@ this way.
 
 This is [me on twitter.](http://twitter.com/bladtman)
 
-<br><br>
+<br>
 
-#Posts
+#Slider scaling
+Sliders are often used to give a visual cue in content filtering; the user drags
+a slider to a position corresponding to some value, and content is then filtered
+according to that value.
+
+Linear slider scales provide a poor user experience, because the underlying data
+is rarely a uniform distribution. This creates two problems; large portions of
+the slider may represent no change in the filtering ...
+
+[Read more](blog/slider-scaling.html)
 
 ---
 
-##A Joiner's Mallet in Walnut
+#A Joiner's Mallet in Walnut
 
 I decided a good project for me would be making a mallet. I had a reasonably
 sized block of walnut lying around from my school days, and I needed one. I'd
@@ -27,6 +36,4 @@ less mass a tool has, the faster you will end up moving it to generate the
 same ...
 
 [Read more](blog/mallet.html)
-
----
 
