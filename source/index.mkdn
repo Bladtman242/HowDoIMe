@@ -1,6 +1,10 @@
----
-title: How do I Me
----
+<!-- this is an ugly hack -->
+<style>
+  hr {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+</style>
 
 My name is Sigurt, here I'll be writing about how I me.  
 I'll be posting about this and that, so no common theme, though I imagine it
