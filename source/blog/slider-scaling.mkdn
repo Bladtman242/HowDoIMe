@@ -215,8 +215,9 @@ straightforward.
 
 ###Footnotes
 [^1]: very very very
-[^2]: At some point in the future, I do a piece about using dynamic programming,
-instead of histogram equalization, to solve the problem of slider scaling.
+[^2]: At some point in the future, I might do a piece about using dynamic
+programming, instead of histogram equalization, to solve the problem of slider
+scaling.
 
 <script id="mustache-templ" type="x-tmpl-mustache">
 	<p>Filter value: {{maxvalue}}
