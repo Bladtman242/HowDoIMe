@@ -2,8 +2,8 @@
 
 .DEFAULT_GOAL := all
 
-source_files=$(shell find source -type f -name '*.mkdn')
-source_assets=$(shell find source -type f -not -name '*.mkdn')
+source_files := $(shell find source -type f -name '*.mkdn')
+source_assets := $(shell find source -type f -not -name '*.mkdn')
 
 # replicate source/ folder structure in out/
 $(shell cd source; find * -type d -not -empty -exec mkdir -p ../out/'{}' \;)
@@ -11,8 +11,8 @@ $(shell cd source; find * -type d -not -empty -exec mkdir -p ../out/'{}' \;)
 # (assets) into out
 #$(shell cd source; rsync -r --exclude '*.mkdn' . ../out/)
 
-dest_files=$(patsubst source/%.mkdn,out/%.html, $(source_files))
-dest_assets=$(patsubst source/%,out/%, $(source_assets))
+dest_files := $(patsubst source/%.mkdn,out/%.html, $(source_files))
+dest_assets := $(patsubst source/%,out/%, $(source_assets))
 
 all: $(dest_files) $(dest_assets)
 
