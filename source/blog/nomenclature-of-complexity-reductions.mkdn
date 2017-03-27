@@ -13,8 +13,8 @@ complicated discussion.
 Our goal in using reductions is as follows: For two given problems, $A$ and $B$, we
 want to prove that $B \ge A$, that is; problem $B$ is at least as hard as a problem
 $A$. To prove $B \ge A$, we show that $A$ can be represented as an instance of $B$. It
-must be the case that $B \ge A$ then, because if $A$ can be represented as $B$, any
-easy solution to $B$ could be used as an easy solution to $A$[^1]. We say that we
+must be the case that $B \ge A$ then[^1], because if $A$ can be represented as $B$, any
+easy solution to $B$ could be used as an easy solution to $A$. We say that we
 _reduce_ $A$ to $B$.
 
 Intuitively reducing $A$ to $B$ means we make $A$ as small as $B$. While It makes sense
