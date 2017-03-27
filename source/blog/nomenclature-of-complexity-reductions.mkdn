@@ -7,8 +7,8 @@ I think it’s fair to say that there is a general confusion about reduction in
 complexity theory, and I think a lot of it comes from the terminology used. To
 underscore the point, I recently had a discussion about the time complexity of
 prime factorization with a friend, during which neither of us were able to
-consistently use the terminology correctly, leading to confusion in an already
-complicated discussion.
+consistently use the terminology correctly, leading to confusion in a discussion
+of an already complicated subject.
 
 Our goal in using reductions is as follows: For two given problems, $A$ and $B$, we
 want to prove that $B \ge A$, that is; problem $B$ is at least as hard as a problem
