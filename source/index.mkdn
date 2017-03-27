@@ -14,6 +14,17 @@ This is [me on twitter.](http://twitter.com/bladtman)
 
 <br>
 
+#On the Nomenclature of Complexity Reductions
+I think it’s fair to say that there is a general confusion about reduction in
+complexity theory, and I think a lot of it comes from the terminology used. To
+underscore the point, I recently had a discussion about the time complexity of
+prime factorization with a friend, during which neither of us were able to
+consistently use the terminology correctly ...
+
+[Read more](blog/nomenclature-of-complexity-reductions.html)
+
+---
+
 #Slider scaling
 Sliders are often used to give a visual cue in content filtering; the user drags
 a slider to a position corresponding to some value, and content is then filtered
