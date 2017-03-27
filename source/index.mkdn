@@ -6,13 +6,9 @@
   }
 </style>
 
-My name is Sigurt, here I'll be writing about how I me.  
-I'll be posting about this and that, so no common theme, though I imagine it
-will be mostly joinery, computer science, and programming.
-As a matter of fact, this blog is one project I expect to be writing about soon.
-I will be developing it side-by-side with publishing on it. And if I end up with
-something worthwhile, I might make a real framework/tool for building blogs in
-this way.
+Here I write about how I me.  
+I post about this and that, with no common theme, though mostly
+about joinery, computer science, and programming.
 
 This is [me on twitter.](http://twitter.com/bladtman)
 
