@@ -1,40 +1,58 @@
 ---
-title: On the Terminology of Complexity Reductions
+title: On the Nomenclature of Complexity Reductions
 date: May 27, 2017
 ---
 
-I think it's fair to say that there is a general confusion about complexity
-theory and reductions, and I think a lot of it comes from the terminology used.
-Setting out to prove that a problem $B$ is at least as hard as a problem $A$ ($B
-\ge A$), we solve $A$, as an instance of $B$, proving that $B$ is at least at
-hard as $A$, because any easy solution to $B$ could be used as an easy solution
-to $A$. We say that we _reduce_ $A$ to $B$.
+I think it’s fair to say that there is a general confusion about reduction in
+complexity theory, and I think a lot of it comes from the terminology used. To
+underscore the point, I recently had a discussion about the time complexity of
+prime factorization with a friend, during which neither of us were able to
+consistently use the terminology correctly, leading to confusion in an already
+complicated discussion.
 
-Intuitively reducing $A$ to $B$ means we make $A$ as small as $B$. While It
-makes sense that if we can show $A$ to be as small as $B$, $B$ is at least as
-big as $A$, the directionality of reduction is inverse to our intuition, in that
-we reduce the small problem to the larger problem, rather than vice versa. When
-learning about reductions, many students accidentally reduce in the wrong
-direction. That is, in an attempt to prove $A \gt B$, they reduce $A$ to $B$,
-getting them into trouble. My claim is that the unintuitive directionality of
-the term _reduce_ is a part of the problem. In fact, one of my algorithms
-teachers, an associate professor of algorithm engineering, told me he
-specifically remembered the direction to reduce in, by telling him self to
-reduce in the _opposite_ direction of what he would think made sense. That, to
-me, seems like a problem.
+Our goal in using reductions is as follows: For two given problems, $A$ and $B$, we
+want to prove that $B \ge A$, that is; problem $B$ is at least as hard as a problem
+$A$. To prove $B \ge A$, we show that $A$ can be represented as an instance of $B$. It
+must be the case that $B \ge A$ then, because if $A$ can be represented as $B$, any
+easy solution to $B$ could be used as an easy solution to $A$[^1]. We say that we
+_reduce_ $A$ to $B$.
+
+Intuitively reducing $A$ to $B$ means we make $A$ as small as $B$. While It makes sense
+that if we can show $A$ to be as small as $B$, $B$ is at least as big as $A$, the
+directionality of reduction is inverse to our intuition, in that to prove that
+$B$ is hard, we show that $A$ is easy. When learning about reductions in complexity
+theory, many students accidentally reduce in the wrong direction. That is, in
+an attempt to prove $A \ge B$, they reduce $A$ to $B$, getting them into trouble. My
+claim is that the unintuitive directionality of the term _reduce_ is a part of
+the problem. In fact, one of my algorithms teachers, an associate professor of
+algorithm engineering, told me he specifically remembered the direction to
+reduce in, by telling himself to reduce in the _opposite_ direction of what he
+would think made sense. That, to me, seems like a problem.
 
 We can help this counter-intuitiveness by always describing the problem as
 "showing that $A$ is at least as small as $B$" (simply inverting the
 left-/right-hand sides of the inequality), in which case the directionality of
-reduction from $A$ to $B$ sounds right, but perhaps it is better to do away with
-the term _reduction_ altogether.
+reduction from $A$ to $B$ might sound right, but perhaps it is better to do away
+with the term _reduction_ altogether.
 
-Saying that $A$ can be reduced to $B$ is the same as saying that $B$ is
-sufficient for $A$, or that $B$ is large enough to cover $A$. In these
-formulations, the analogy to a simple less-than relation between scalars is more
-direct, in that an amount $B$ is sufficient for a smaller amount $A$.
+Saying that $A$ can be reduced to $B$ is the same as saying that $B$ is sufficient
+for $A$, or that $B$ is large enough to cover $A$. In these formulations, the analogy
+to a simple less-than relation between scalars is more direct, in that an
+amount $B$ is sufficient when needing a smaller amount $A$.
 
-With this formulation, we could say that that $B$ is at least as large as $A$,
-which we should prove by showing $B$ to be sufficient for $A$. In this
-formulation it is clear that we must prove that we can use $B$ to solve $A$,
-which is what was elusive in the previous formulation.
+With this formulation, we could say that $B$ is at least as large as $A$, which we
+should prove by showing that $B$ suffices for $A$. In this formulation it is clear
+that we must prove that we can use $B$ to solve $A$, which is what was elusive in
+the previous formulation.
+
+With this formulation, we could say that showing $B$ to be _sufficient_ for $A$
+proves that $B \ge A$. This might be clearer than the equivalent formulation;
+showing that $A$ is reducible to $B$ proves that $B \ge A$.
+
+###Footnotes
+[^1]: Actually, for such a proof the cost of transforming problem $A$ into
+problem $B$ must be taken into account. Normally, we use $B \ \ge_p \ A$ to
+denote that the cost of the transformation may be polynomial in the problem
+size. The transformation is then called a polynomial-time reduction. I omit
+such terminology and notation, as it immaterial to the overall nomenclature of
+reductions, which is what we are concerned with here.
