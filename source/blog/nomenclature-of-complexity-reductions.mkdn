@@ -40,11 +40,6 @@ for $A$, or that $B$ is large enough to cover $A$. In these formulations, the an
 to a simple less-than relation between scalars is more direct, in that an
 amount $B$ is sufficient when needing a smaller amount $A$.
 
-With this formulation, we could say that $B$ is at least as large as $A$, which we
-should prove by showing that $B$ suffices for $A$. In this formulation it is clear
-that we must prove that we can use $B$ to solve $A$, which is what was elusive in
-the previous formulation.
-
 With this formulation, we could say that showing $B$ to be _sufficient_ for $A$
 proves that $B \ge A$. This might be clearer than the equivalent formulation;
 showing that $A$ is reducible to $B$ proves that $B \ge A$.
