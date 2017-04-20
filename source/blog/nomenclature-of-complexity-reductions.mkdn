@@ -1,6 +1,6 @@
 ---
 title: On the Nomenclature of Complexity Reductions
-date: May 27, 2017
+date: March 27, 2017
 ---
 
 I think it’s fair to say that there is a general confusion about reduction in
@@ -45,9 +45,9 @@ proves that $B \ge A$. This might be clearer than the equivalent formulation
 showing that $A$ is reducible to $B$ proves that $B \ge A$.
 
 ###Footnotes
-[^1]: Actually, for such a proof the cost of transforming problem $A$ into
+[^1]: For such a proof to hoĺd in general, the cost of transforming problem $A$ into
 problem $B$ must be taken into account. Normally, we use $B \ \ge_p \ A$ to
 denote that the cost of the transformation may be polynomial in the problem
 size. The transformation is then called a polynomial-time reduction. I omit
-such terminology and notation, as it immaterial to the overall nomenclature of
+such terminology and notation, as it is immaterial to the overall nomenclature of
 reductions, which is what we are concerned with here.
