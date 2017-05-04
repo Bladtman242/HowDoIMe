@@ -50,15 +50,7 @@ var sliders = {
                 view.maxvalue = max;
             } else {
                 view.maxvalue = Math.round(max + (nextFilter - max) * ((sliderval-maxI)/(nextFilterI - maxI)));
-                console.log("nextFilter: " + nextFilter);
-                console.log("max: " + max);
-                console.log("sliderval: " + sliderval);
-                console.log("maxI: " + maxI);
-                console.log("nextFilterI: " + nextFilterI);
-                console.log("maxI: " + maxI);
-                console.log("(sliderval-maxI)/(nextFilterI-maxI): " + (sliderval-maxI)/(nextFilterI-maxI));
             }
-            //view.maxvalue = max;
             view.count = points.length;
             view.totaldata = data.length;
         }
@@ -74,7 +66,7 @@ var sliders = {
     },
 
     init: function init() {
-        var setMinMax = function(slider, min, max) {
+        var initSlider = function(slider, min, max) {
             var sliderinput = document.getElementById(slider);
             var mindiv = document.getElementById(slider + "-min");
             var maxdiv = document.getElementById(slider + "-max");
@@ -83,17 +75,18 @@ var sliders = {
             sliderinput.max = max;
             mindiv.innerHTML = min;
             maxdiv.innerHTML = max;
+            sliderinput.value = (min+max)/2
         }
 
         //linear
         lin_max = data[data.length -1].focal_length;
         lin_min = data[0].focal_length;
-        setMinMax("slider-linear", lin_min, lin_max);
+        initSlider("slider-linear", lin_min, lin_max);
 
         //hist equalized
         eq_max = lin_max;
         eq_min = lin_min;
-        setMinMax("slider-equalized", eq_min, eq_max);
+        initSlider("slider-equalized", eq_min, eq_max);
 
         this.sliderUpdate("slider-linear");
         this.sliderUpdate("slider-equalized");

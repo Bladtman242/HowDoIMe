@@ -124,7 +124,7 @@ the resulting images have likely been histogram-equalized).
 Histogram equalization works for many types of data, but the canonical
 example is monochrome images. Pixels in a monochrome image can have values
 between the two extremes; black and white. But just like we didn't have lenses
-with every possible focal length between 4.5 and 8000 in the Lenshawk example,
+with every possible focal length between 45 and 8000 in the Lenshawk example,
 you can have images that don't utilize the space between black and white very
 well. It might be that there are no or few values in the brighter end of the
 spectrum (much like our Lenshawk example), or it might be that there are mostly
