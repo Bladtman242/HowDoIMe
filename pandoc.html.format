@@ -56,17 +56,19 @@
       margin-top: 70px;
       margin-bottom: 130px;
     }
+    article div.figure {
+      margin: 1.47em 0 1.47em 0;
+    }
     article img {
       display: block;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 0px;
     }
-    article .caption {
+    article p.caption {
       line-height: 50%;
       font-size: 16px;
       font-style: italic;
-
     }
     article a {
       color: rgba(0,0,0,0.8);
