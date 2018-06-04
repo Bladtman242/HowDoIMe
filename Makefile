@@ -19,7 +19,7 @@ out/%: source/%
 
 #markdown posts
 out/%.html: source/%.mkdn pandoc.html.format
-	pandoc -Ss -f markdown+footnotes --highlight-style zenburn -o $@ $< --template pandoc.html.format
+	pandoc -s -f markdown+footnotes+smart --highlight-style zenburn -o $@ $< --template pandoc.html.format
 
 sync: $(all)
 	docker run -it -v $$PWD/out:/home/aws/out -v $$PWD/aws:/home/aws/.aws fstab/aws-cli bash -c "source /home/aws/aws/env/bin/activate; aws s3 sync out s3://www.howdoi.me --acl public-read"
