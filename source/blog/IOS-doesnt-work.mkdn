@@ -1,0 +1,46 @@
+---
+title: Apple's IOS user interface is not "well designed"
+date: June 1, 2018
+---
+
+  1. App installation doesn't work.
+     I frequently have to install apps twice. There is no error message or
+     notification, the app doesn't show up after the first installation
+  2. The touchscreens, and accompanying UI design, is not great, even for
+     touchscreens. Selecting an input field can be tricky, and the keyboard
+     doesn't always pop up when you do.
+  3. Ghost notifications that seem to originate from the app store
+  4. Icon badge on the settings app won't go away because I don't use apple pay.
+  5. OS pathetically favours it's own apps, with no option to have messages open
+     locations in google maps rather than apple maps. Similarly for browsers.
+  6. The hotspot icons/terminology is nonsensical.
+  7. Even when message notification previews are set to "only when unlocked", it
+     will display the sender. This is a potential privacy breach, and cannot be
+     changed.
+  8. The touch-to-everything hardware is useless if your finger has any amount
+     of moistiure on it.
+  9. Unlocking the phone does not unlock the sim card.
+     I get it. IPhones are somewhat secure, and having the 4-digit SIM pin
+     unlock the phone is insufficient. At the same time, having a stronger
+     password and then no pin for the SIM card is no good. However, there is, to
+     my knowledge, no reason the phone could not unlock the sim card when the
+     password is entered
+  10. The notification system is a mystery, even to long-time users.
+  11. The widget screen is useless as it is hidden away, and apps don't preload
+      information.
+  12. Services/apps seem to have poor conditions for discovering other apps to
+      work with. It appears that any integration mus tbe made manually, rather
+      than apps simply registering them selves as "handlers of data x"?
+  13. The music-player integration on the lock screen and control center is
+      garbage. It often doesn't display the right track.
+  14. What is the deal with having the springboard, a widget center, a
+      lockscreen, a controll center, and a notification tray. Most of these have
+      some overlap with eachother, yet are kept separate, and connected in ways
+      that aren't obvious.
+  15. Notification settings are nonsensical (alert? badge?).
+  16. No option of arranging apps on springboard
+  17. There is now an option to install third party keyboards, but it works
+      terribly. Mine installed twice (once through settings, and once through
+      the appstore), and deletion was non-trivial. The keyboard will also often
+      switch back to the default one, for no apparent reason.
+
