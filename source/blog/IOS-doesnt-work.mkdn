@@ -43,4 +43,15 @@ date: June 1, 2018
       terribly. Mine installed twice (once through settings, and once through
       the appstore), and deletion was non-trivial. The keyboard will also often
       switch back to the default one, for no apparent reason.
+  18. Phantom notifications, apparently caused by the app store app.
+  19. Transparent notification bar becomes unreadable e.g. in spotify app
+  20. Ui elements are often undiscoverable. eg pull-down-to-access features like
+      search in settings app and messages.
+  21. The messenges app cleverly lets you cut videos that are too long for
+      sending, but the ui sucks ass, and if you try to play the video from
+      messeges, it will play the full original video, so if you later want to se
+      what the recipient saw, you cant.
+  22. The hw silent button is nice, but probably wouldn't be necessary if the
+      silent mode wasn't retarded (why can't my timers play sound?)
+  23. Music frequently keeps playing briefly after headphones are disconnected.
 
