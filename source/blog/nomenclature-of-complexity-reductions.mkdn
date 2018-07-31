@@ -44,7 +44,7 @@ With this formulation, we could say that showing $B$ to be _sufficient_ for $A$
 proves that $B \ge A$. This might be clearer than the equivalent formulation;
 showing that $A$ is reducible to $B$ proves that $B \ge A$.
 
-###Footnotes
+### Footnotes
 [^1]: For such a proof to hold in general, the cost of transforming problem $A$ into
 problem $B$ must be taken into account. Normally, we use $B \ \ge_p \ A$ to
 denote that the cost of the transformation may be polynomial in the problem

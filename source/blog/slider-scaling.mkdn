@@ -27,7 +27,7 @@ I propose the use of histogram equalization for creating biased scales --- a
 custom mapping from slider-positions to values in the underlying data. In fact,
 I expect this solution to fit _any_ dataset you might come up with.
 
-##Lenshawk lenses by focal length
+## Lenshawk lenses by focal length
 
 Before I go further in-depth with the solution, let's see an example.
 The two sliders below simulate filtering on the freely available Lens Hawk
@@ -40,7 +40,7 @@ focal length. You can try it out [here](http://lenshawk.com/).
 
 ---
 
-###Linear slider
+### Linear slider
 
 <div id="slider-linear-contentpane"></div>
 <span id="slider-linear-min"></span>
@@ -49,7 +49,7 @@ focal length. You can try it out [here](http://lenshawk.com/).
 
 ---
 
-###Biased slider
+### Biased slider
 
 <div id="slider-equalized-contentpane"></div>
 <span id="slider-equalized-min"></span>
@@ -100,7 +100,7 @@ For now, let's look at a method to create a biased scale for any data set,
 without the manual tweaking that logarithmic and exponential scales sometimes
 require.
 
-##Histogram Equalization
+## Histogram Equalization
 
 Recall that a slider-scale is simply a mapping from slider position to a
 threshold value for the underlying data.
@@ -196,7 +196,7 @@ over the focal lengths (which are really slider positions now). The cumulative
 frequency is a lot more linear than originally.
 
 
-##Aftermath
+## Aftermath
 Histogram equalization seems like a viable technique for creating biased slider
 scales. The major advantage being that the technique is general, and can be
 applied without manual tweaking for individual data sets; one size fits all!
@@ -213,7 +213,7 @@ straightforward.
 [orig_histograms]: slider-scaling-assets/original_plot.png
 [eq_histograms]: slider-scaling-assets/equalized_plot.png
 
-###Footnotes
+### Footnotes
 [^1]: very very very
 [^2]: At some point in the future, I might do a piece about using dynamic
 programming, instead of histogram equalization, to solve the problem of slider

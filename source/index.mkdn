@@ -18,7 +18,7 @@ This is [me on twitter.](http://twitter.com/bladtman)
 
 <br>
 
-#On the Nomenclature of Complexity Reductions
+# On the Nomenclature of Complexity Reductions
 I think it’s fair to say that there is a general confusion about reduction in
 complexity theory, and I think a lot of it comes from the terminology used. To
 underscore the point, I recently had a discussion about the time complexity of
@@ -29,7 +29,7 @@ consistently use the terminology correctly ...
 
 ---
 
-#Slider scaling
+# Slider scaling
 Sliders are often used to give a visual cue in content filtering; the user drags
 a slider to a position corresponding to some value, and content is then filtered
 according to that value.
@@ -42,7 +42,7 @@ the slider may represent no change in the filtering ...
 
 ---
 
-#A Joiner's Mallet in Walnut
+# A Joiner's Mallet in Walnut
 
 I decided a good project for me would be making a mallet. I had a reasonably
 sized block of walnut lying around from my school days, and I needed one. I'd

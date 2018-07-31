@@ -56,7 +56,7 @@ Sharp angles are weak and prone to breakage. Sharp angles  are also problematic
 with regard to finishing, as the surface tension in the finish will tend to drag
 it away from sharp corners.
 
-##Cutting the mortise
+## Cutting the mortise
 
 ![The bulk of the mortise is drilled out] [drilled]
 
