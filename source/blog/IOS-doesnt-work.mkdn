@@ -47,11 +47,17 @@ date: June 1, 2018
   19. Transparent notification bar becomes unreadable e.g. in spotify app
   20. Ui elements are often undiscoverable. eg pull-down-to-access features like
       search in settings app and messages.
-  21. The messenges app cleverly lets you cut videos that are too long for
+  21. The messages app cleverly lets you cut videos that are too long for
       sending, but the ui sucks ass, and if you try to play the video from
-      messeges, it will play the full original video, so if you later want to se
+      messages, it will play the full original video, so if you later want to se
       what the recipient saw, you cant.
   22. The hw silent button is nice, but probably wouldn't be necessary if the
       silent mode wasn't retarded (why can't my timers play sound?)
   23. Music frequently keeps playing briefly after headphones are disconnected.
+  24. bedtime reminder can't set arbitrary values, no more than 1 hour.
+  24. bedtime doesn't integrate with the alarm at all... no snooze, different
+      sound..
+  25. No indicator led, repeat vibration is retarded
+  26. New iphone -> wrong apple ID -> update apple id: app store will still show
+      the old apps under purchased, not the "new" apps.
 
