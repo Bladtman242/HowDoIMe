@@ -116,7 +116,7 @@ The properties we are looking for in this mapping are:
 As it turns out, these properties are valued in contrast adjustment as well.
 
 A common problem in image processing is contrast adjustment. Contrast adjustment
-is used for example by photographers, for aesthetic purposes, and scientist have
+is used for example by photographers, for aesthetic purposes, and scientists have
 found use for it in image segmentation, which is used for things like
 computer vision and medical image analysis (If you've ever had an MRI, CT, or X-ray,
 the resulting images have likely been histogram-equalized).
