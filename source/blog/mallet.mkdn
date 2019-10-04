@@ -30,7 +30,7 @@ blog](http://woodworking.formeremortals.net/2012/06/make-a-wood-mallet/)
 
 In the end, I went with Sellers' design for the heft, and rugged look.
 
-![Truing and squaring the block of walnut] [block-walnut]
+![Truing and squaring the block of walnut][block-walnut]
 
 The walnut had already been milled at the school, where I had access to
 mechanical jointers and thickness planers, but after a few months of lying
@@ -46,7 +46,7 @@ on the handle. The mallet isn't glued up, so the mechanical strength of the
 tapered handle --- wedging into a tapered mortise in the head --- is all that's
 keeping the mallet together!
 
-![Head and handle, bandsawn] [bandsawn]
+![Head and handle, bandsawn][bandsawn]
 
 The striking surfaces of the head are tapered more aggressively. I'm not sure how
 this affects usage, but it helps in making the edges and
@@ -58,7 +58,7 @@ it away from sharp corners.
 
 ## Cutting the mortise
 
-![The bulk of the mortise is drilled out] [drilled]
+![The bulk of the mortise is drilled out][drilled]
 
 The measurements for the mortise are copied from the handle using marking,
 gauge, ruler, square, and a marking knife. This way, the taper in the mortise is
@@ -66,7 +66,7 @@ the same as that on the handle. To save time and effort, the bulk of the mortise
 is drilled out using an auger bit. The only bit I had was 8mm in diameter. A
 better fit would have probably saved me some effort.
 
-![The cut mortise] [mortise]
+![The cut mortise][mortise]
 
 The faces of the mortise are then cut with a chisel (this is the part where a
 mallet would have been really useful). This was probably the hardest part of this
@@ -84,15 +84,15 @@ for seven hundred years, and I've never heard of...". I'm not sure why they
 think you'll be impressed by them _not_ knowing their field after working in it
 for centuries.
 
-![Linseed oil drying] [drying]
+![Linseed oil drying][drying]
 
 The end result is a slightly rugged looking tool.
 
-![Finished mallet] [finished]
+![Finished mallet][finished]
 
 <br>
 
-![Finished mallet] [finished-stand]
+![Finished mallet][finished-stand]
 
 As you can see, the end-grain was not quite ready for finishing.
 Normally, I would have taken care to plane or sand (more likely both) that
@@ -104,7 +104,7 @@ end grain soaks up much more of the finish than the rest of the wood, that's why
 it's so much darker. To avoid that, you sand the end-grain to a finer grit than
 the rest, to limit its ability to absorb the finish.
 
-![Finished mallet end-grain] [finished-end]
+![Finished mallet end-grain][finished-end]
 
 That rounding on the sides of the head is not a photographic artifact. I
 made those with a plane. Many people assume a plane will always produce a flat

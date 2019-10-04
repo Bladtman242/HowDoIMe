@@ -145,7 +145,7 @@ our prices to fit our slider.
 As it turns out, this is not a big problem --- we don't change the underlying
 values, just how our slider maps to them!
 
-![Distribution of lenses over focal-length ] [orig_histograms]
+![Distribution of lenses over focal-length][orig histograms]
 
 In order to understand how histogram equalization can help (and what it is), let's
 take a closer look at the problem. The figure above shows the frequency and
@@ -187,7 +187,7 @@ For slider scaling however, we simply pretend that our slider _is_ the new data
 set, and then use the inverse of the mapping to get the value represented by a
 point on the slider!
 
-![Equalized distribution of lenses over focal-length] [eq_histograms]
+![Equalized distribution of lenses over focal-length][eq histograms]
 
 If we pretend that we did build a new data set, and then calculate the frequency
 histogram and cumulative frequency of it, we get the figure above.
@@ -210,8 +210,8 @@ wrote the preprocessing in [Gawk](https://www.gnu.org/software/gawk/) (A
 decision I thoroughly regret), but porting to other languages should be
 straightforward.
 
-[orig_histograms]: slider-scaling-assets/original_plot.png
-[eq_histograms]: slider-scaling-assets/equalized_plot.png
+[orig histograms]: slider-scaling-assets/original_plot.png
+[eq histograms]: slider-scaling-assets/equalized_plot.png
 
 ### Footnotes
 [^1]: very very very
